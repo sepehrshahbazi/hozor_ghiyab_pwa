@@ -1,0 +1,236 @@
+/* ============================================
+   HOME.CSS - نسخه نهایی با رفع ۱۰۰٪ مشکل
+   ============================================ */
+
+/* ---------- عمومی ---------- */
+.home-container {
+  min-height: 100vh;
+  background: #f8fbff;
+  color: #0f172a;
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+/* ---------- هدر (مهم) ---------- */
+.home-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 16px;
+  background: white;
+  border: 1px solid #e6f0ff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(47, 128, 237, 0.08);
+  min-width: 0;          /* اجازه جمع شدن می‌دهد */
+  overflow: hidden;      /* جلوی هرگونه سرریز را می‌گیرد */
+}
+
+/* بخش چپ (دکمه + لوگو) - فضای باقی‌مانده را می‌گیرد */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1 1 auto;        /* رشد می‌کند اما اگر فضا کم بود جمع می‌شود */
+  min-width: 0;          /* اجازه جمع شدن به فرزندان می‌دهد */
+}
+
+/* ===== دکمه بازگشت ===== */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  flex: 0 0 auto;        /* نه بزرگ می‌شود، نه کوچک */
+  padding: 6px 12px;
+  border-radius: 10px;
+  background: #f0f7ff;
+  border: 1px solid #dbeafe;
+  color: #1b3a57;
+  font-weight: 500;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s;
+  white-space: nowrap;
+}
+
+.back-btn:hover {
+  background: #e0edff;
+  border-color: #2f80ed;
+}
+
+/* ===== باکس لوگو ===== */
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1 1 auto;        /* می‌تواند جمع شود */
+  min-width: 0;          /* اجازه جمع شدن به متن می‌دهد */
+}
+
+.logo-img {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex: 0 0 auto;        /* تصویر کوچک نمی‌شود */
+  box-shadow: 0 5px 15px rgba(47, 128, 237, 0.15);
+}
+
+/* ===== متن لوگو (جلوگیری از سرریز) ===== */
+.logo-text {
+  flex: 1 1 auto;
+  min-width: 0;          /* کلید اصلی برای جمع شدن متن */
+  overflow: hidden;      /* مخفی کردن متن اضافی */
+}
+
+.logo-text h3 {
+  margin: 0;
+  font-size: 15px;
+  color: #1b3a57;
+  white-space: nowrap;   /* یک خطی */
+  overflow: hidden;
+  text-overflow: ellipsis; /* اگر خیلی طولانی شد ... بگذارد */
+}
+
+.logo-text span {
+  font-size: 11px;
+  color: #6b7280;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;        /* برای اعمال text-overflow */
+}
+
+/* ===== دکمه خروج (کاملاً ثابت) ===== */
+.logout-btn {
+  flex: 0 0 auto;        /* هرگز بزرگ یا کوچک نمی‌شود */
+  width: auto;
+  background: #2f80ed;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: 0.2s;
+  white-space: nowrap;
+}
+
+.logout-btn:hover {
+  background: #1b3a57;
+}
+
+/* ---------- خط درخشان ---------- */
+.glow-line {
+  height: 2px;
+  width: 100%;
+  margin: 20px 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #2f80ed,
+    #ffffff,
+    #2f80ed,
+    transparent
+  );
+  opacity: 0.9;
+}
+
+/* ---------- کارت‌ها ---------- */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.nav-card {
+  background: white;
+  border: 1px solid #e6f0ff;
+  padding: 20px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  box-shadow: 0 10px 30px rgba(47, 128, 237, 0.08);
+}
+
+.nav-card:hover {
+  transform: translateY(-6px);
+  border-color: #2f80ed;
+  box-shadow: 0 15px 40px rgba(47, 128, 237, 0.15);
+}
+
+.card-icon {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #2f80ed;
+}
+
+.card-text h2 {
+  margin: 0;
+  font-size: 16px;
+  color: #1b3a57;
+}
+
+.card-text p {
+  margin: 5px 0 0;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* ---------- بارگذاری ---------- */
+.loading-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #6b7280;
+}
+
+/* ---------- واکنش‌گرایی موبایل ---------- */
+@media (max-width: 480px) {
+  .home-container {
+    padding: 12px;
+  }
+
+  .home-header {
+    padding: 8px 10px;
+    gap: 6px;
+  }
+
+  .header-left {
+    gap: 6px;
+  }
+
+  .back-btn {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+
+  .logo-img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .logo-text h3 {
+    font-size: 13px;
+  }
+
+  .logo-text span {
+    font-size: 10px;
+  }
+
+  .logout-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-card {
+    padding: 14px;
+  }
+}

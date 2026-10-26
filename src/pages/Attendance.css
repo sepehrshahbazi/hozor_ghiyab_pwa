@@ -1,0 +1,449 @@
+/* =========================
+   ATTENDANCE - BLUE THEME
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(180deg, #ffffff 0%, #eaf3ff 100%);
+  color: #1f2937;
+  font-family: Vazirmatn, sans-serif;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.attendance-container {
+  max-width: 900px;
+  margin: auto;
+
+  min-height: 100vh;
+
+  padding: 24px 16px;
+
+  direction: rtl;
+  font-family: Vazirmatn, sans-serif;
+
+  background: linear-gradient(180deg, #ffffff 0%, #eaf3ff 100%);
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.attendance-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: #ffffff;
+
+  padding: 14px 16px;
+
+  border-radius: 18px;
+  margin-bottom: 14px;
+
+  border: 1px solid #e6f0ff;
+
+  box-shadow: 0 6px 20px rgba(47, 128, 237, 0.08);
+}
+
+.attendance-header h1 {
+  color: #1b3a57;
+  font-size: 18px;
+  margin: 0;
+  font-weight: 700;
+}
+
+/* back button */
+
+
+
+.attendance-header button:hover,
+.back-btn:hover {
+  background: #1b3a57;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   STATUS
+========================= */
+
+.status-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  background: #ffffff;
+
+  padding: 16px;
+
+  border-radius: 18px;
+
+  margin-bottom: 14px;
+
+  border: 1px solid #e6f0ff;
+
+  box-shadow: 0 6px 20px rgba(47, 128, 237, 0.06);
+}
+
+.status-card h3 {
+  color: #1b3a57;
+  margin-bottom: 4px;
+}
+
+.status-card p {
+  color: #6b7280;
+}
+
+/* online */
+
+.online {
+  border-right: 4px solid #2f80ed;
+}
+
+/* offline */
+
+.offline {
+  border-right: 4px solid #ef4444;
+}
+
+.status-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+.online .status-dot {
+  background: #2f80ed;
+  box-shadow: 0 0 12px rgba(47, 128, 237, 0.5);
+}
+
+.offline .status-dot {
+  background: #ef4444;
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.5);
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+  background: #ffffff;
+
+  padding: 16px;
+
+  border-radius: 18px;
+
+  margin-bottom: 14px;
+
+  border: 1px solid #e6f0ff;
+
+  box-shadow: 0 6px 20px rgba(47, 128, 237, 0.05);
+}
+
+.card label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #1b3a57;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+.card select,
+.card textarea {
+  width: 100%;
+
+  margin-top: 6px;
+
+  padding: 12px 14px;
+
+  border-radius: 12px;
+
+  border: 1px solid #d6e8ff;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #1f2937;
+
+  font-size: 14px;
+
+  transition: all 0.2s ease;
+}
+
+.card select:focus,
+.card textarea:focus {
+  border-color: #2f80ed;
+
+  box-shadow: 0 0 0 4px rgba(47, 128, 237, 0.12);
+}
+
+.card textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.action-section {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 16px;
+}
+
+/* checkin / checkout */
+
+.checkin-btn,
+.checkout-btn,
+.action-section button {
+  width: 100%;
+
+  padding: 14px;
+
+  border-radius: 14px;
+
+  border: none;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  color: white;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+/* checkin */
+
+.checkin-btn {
+  background: #2f80ed;
+}
+
+.checkin-btn:hover {
+  background: #1b3a57;
+}
+
+/* checkout */
+
+.checkout-btn {
+  background: #ef4444;
+}
+
+.checkout-btn:hover {
+  background: #dc2626;
+}
+
+/* generic button */
+
+.action-section button {
+  background: #2f80ed;
+
+  box-shadow: 0 4px 14px rgba(47, 128, 237, 0.25);
+}
+
+.action-section button:hover {
+  background: #1b3a57;
+}
+
+.action-section button:active {
+  transform: scale(0.98);
+}
+
+/* disabled */
+
+.checkin-btn:disabled,
+.checkout-btn:disabled,
+.action-section button:disabled {
+  background: #9ca3af;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* =========================
+   ERROR
+========================= */
+
+.error-box {
+  background: #fff5f5;
+
+  color: #dc2626;
+
+  padding: 14px;
+
+  border-radius: 14px;
+
+  font-size: 13px;
+
+  margin-top: 12px;
+
+  border: 1px solid #ffd6d6;
+}
+
+/* =========================
+   WARNING
+========================= */
+
+.location-warning {
+  background: #f0f7ff;
+
+  border: 1px solid #d6e8ff;
+
+  color: #1b3a57;
+
+  padding: 14px;
+
+  border-radius: 14px;
+
+  margin-bottom: 14px;
+}
+
+/* =========================
+   LOADING
+========================= */
+
+.loading-page {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+
+  color: #2f80ed;
+
+  background: linear-gradient(180deg, #ffffff 0%, #eaf3ff 100%);
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+
+  border: 4px solid #d6e8ff;
+  border-top: 4px solid #2f80ed;
+
+  border-radius: 50%;
+
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .attendance-container {
+    padding: 18px 12px;
+  }
+
+  .attendance-header h1 {
+    font-size: 16px;
+  }
+
+  .card {
+    padding: 14px;
+  }
+
+  .checkin-btn,
+  .checkout-btn,
+  .action-section button {
+    padding: 13px;
+    font-size: 14px;
+  }
+
+  .status-card {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.attendance-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px 20px;
+  margin-bottom: 20px;
+
+  background: white;
+  border: 1px solid #e6f0ff;
+  border-radius: 16px;
+
+  box-shadow: 0 10px 30px rgba(47, 128, 237, 0.08);
+}
+
+/* back button */
+.back-btn {
+  background: #2f80ed;
+  color: white;
+
+  border: none;
+  border-radius: 8px;
+
+  padding: 4px 10px;
+  font-size: 12px;
+
+  height: 28px;
+
+  cursor: pointer;
+
+  font-weight: 500;
+
+  width: auto;        /* 👈 مهم */
+  flex: 0 0 auto;     /* 👈 جلوگیری از کش آمدن */
+}
+
+.back-btn:hover {
+  background: #1b3a57;
+}
+
+/* reuse from home */
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.logo-text h3 {
+  margin: 0;
+  font-size: 15px;
+  color: #1b3a57;
+}
+
+.logo-text span {
+  font-size: 12px;
+  color: #6b7280;
+}

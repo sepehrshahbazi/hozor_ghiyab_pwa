@@ -1,0 +1,171 @@
+.splash-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #ffffff 0%, #eaf3ff 100%);
+  font-family: "Vazirmatn", Tahoma, sans-serif;
+  direction: rtl;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.content {
+  width: 100%;
+  max-width: 360px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(47, 128, 237, 0.15);
+  text-align: center;
+  border: 1px solid #e6f0ff;
+}
+
+/* LOGO */
+.logo-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.logo-box svg {
+  width: 70px;
+  height: 70px;
+  padding: 14px;
+  border-radius: 50%;
+  background: #2f80ed;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.logo-box h1 {
+  margin: 0;
+  color: #1b3a57;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* LOADING */
+.loading-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #eaf3ff;
+  border-top: 3px solid #2f80ed;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-indicator p,
+.loading-text {
+  color: #6b7280;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* ERROR */
+.error-box {
+  background: #fff5f5;
+  border: 1px solid #ffd6d6;
+  padding: 16px;
+  border-radius: 12px;
+  color: #b91c1c;
+  text-align: center;
+}
+
+.error-icon {
+  font-size: 26px;
+  margin: 0 0 6px;
+}
+
+.error-message {
+  margin: 0 0 12px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #b91c1c;
+}
+
+/* GUIDE (device instructions) */
+.guide-box {
+  background: #ffffff;
+  border: 1px solid #ffd6d6;
+  border-radius: 10px;
+  padding: 14px;
+  margin: 12px 0;
+  text-align: right;
+}
+
+.guide-title {
+  font-weight: 700;
+  color: #1b3a57;
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+
+.guide-steps {
+  margin: 0;
+  padding-right: 20px;
+  padding-left: 0;
+  color: #374151;
+  font-size: 13px;
+  line-height: 2;
+}
+
+.guide-hint {
+  margin: 10px 0 0;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* PERMISSION REQUEST */
+.permission-box {
+  background: #f0f7ff;
+  border: 1px solid #d6e8ff;
+  padding: 18px;
+  border-radius: 12px;
+  color: #1b3a57;
+  text-align: center;
+}
+
+.permission-text {
+  margin: 0 0 14px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* BUTTON */
+.retry-btn {
+  margin-top: 8px;
+  background: #2f80ed;
+  color: #ffffff;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s;
+  width: 100%;
+}
+
+.retry-btn:hover {
+  background: #1b3a57;
+}
+
+.retry-btn:active {
+  transform: scale(0.98);
+}
